@@ -3,16 +3,12 @@ class PhonenumbersController < ApplicationController
   # GET /phonenumbers.json
   def index
     @phonenumbers = Phonenumber.all
-
-    render json: @phonenumbers
   end
 
   # GET /phonenumbers/1
   # GET /phonenumbers/1.json
   def show
     @phonenumber = Phonenumber.find(params[:id])
-
-    render json: @phonenumber
   end
 
   # POST /phonenumbers

@@ -3,16 +3,12 @@ class PhonetypesController < ApplicationController
   # GET /phonetypes.json
   def index
     @phonetypes = Phonetype.all
-
-    render json: @phonetypes
   end
 
   # GET /phonetypes/1
   # GET /phonetypes/1.json
   def show
     @phonetype = Phonetype.find(params[:id])
-
-    render json: @phonetype
   end
 
   # POST /phonetypes
