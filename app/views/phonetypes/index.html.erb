@@ -1,0 +1,25 @@
+<h1>Listing phonetypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @phonetypes.each do |phonetype| %>
+      <tr>
+        <td><%= link_to 'Show', phonetype %></td>
+        <td><%= link_to 'Edit', edit_phonetype_path(phonetype) %></td>
+        <td><%= link_to 'Destroy', phonetype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Phonetype', new_phonetype_path %>
